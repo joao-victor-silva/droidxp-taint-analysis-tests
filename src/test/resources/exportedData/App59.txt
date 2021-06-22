@@ -1,0 +1,28 @@
+App59 results data. 
+
+Found 1 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 444 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 375 MB
+
+List of Sources: 
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r16.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r17, 0, $i0)
+

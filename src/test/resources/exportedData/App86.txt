@@ -1,0 +1,27 @@
+App86 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Max Memory Consumption: 412 MB
+
+List of Sources: 
+	$r15 = virtualinvoke $r12.<android.content.pm.PackageManager: java.util.List queryBroadcastReceivers(android.content.Intent,int)>($r14, 0)
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("libsuperuser", $r0)
+
+Malign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Max Memory Consumption: 368 MB
+
+List of Sources: 
+	$r15 = virtualinvoke $r12.<android.content.pm.PackageManager: java.util.List queryBroadcastReceivers(android.content.Intent,int)>($r14, 0)
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("libsuperuser", $r0)
+

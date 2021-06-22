@@ -1,0 +1,25 @@
+App69 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 1 seconds
+Max Memory Consumption: 632 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 726 MB
+
+List of Sources: 
+
+List of Sinks: 
+

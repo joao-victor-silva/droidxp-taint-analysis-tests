@@ -1,0 +1,34 @@
+App74 results data. 
+
+Found 5 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 1 seconds
+Max Memory Consumption: 334 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 5
+Number of sources: 3
+Number of sinks: 5
+Performance data: Total Runtime: 4 seconds
+Max Memory Consumption: 397 MB
+
+List of Sources: 
+	$r2 = virtualinvoke $r6.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r6 = virtualinvoke $r4.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>($r5, 0)
+	$r14 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r19.<java.io.OutputStream: void write(byte[],int,int)>($r13, 0, $i0)
+	virtualinvoke $r4.<java.io.FileOutputStream: void write(byte[])>($r5)
+	$r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r3, $r1)
+	virtualinvoke $r17.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r13, 0, $i0)
+	virtualinvoke $r8.<java.io.BufferedWriter: void write(java.lang.String)>($r14)
+

@@ -1,0 +1,36 @@
+App16 results data. 
+
+Found 9 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 639 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 9
+Number of sources: 7
+Number of sinks: 4
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 216 MB
+
+List of Sources: 
+	$r4 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r1.<android.location.Location: double getLongitude()>()
+	$r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, null, null, null)
+	$r5 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r5 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r1.<android.location.Location: double getLatitude()>()
+	$r9 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DomobSDK", $r11)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DomobSDK", $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DomobSDK", $r5)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DomobSDK", $r6)
+

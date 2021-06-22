@@ -1,0 +1,39 @@
+App11 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 6
+Number of sources: 4
+Number of sinks: 5
+Performance data: Taint Propagation: 10 seconds
+Total Runtime: 12 seconds
+Max Memory Consumption: 504 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLongitude()>()
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLatitude()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("UmAd SDK 2.0", $r0)
+	virtualinvoke $r5.<java.io.FileOutputStream: void write(byte[],int,int)>($r4, 0, $i1)
+	virtualinvoke r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("content", $r7)
+	virtualinvoke $r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r4, 0, $i1)
+	virtualinvoke r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("title", $r7)
+
+Malign: 
+Number of conflicts: 2
+Number of sources: 1
+Number of sinks: 2
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 322 MB
+
+List of Sources: 
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+
+List of Sinks: 
+	virtualinvoke r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("content", $r7)
+	virtualinvoke r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("title", $r7)
+

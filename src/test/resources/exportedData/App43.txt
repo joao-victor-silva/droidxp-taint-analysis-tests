@@ -1,0 +1,38 @@
+App43 results data. 
+
+Found 2 conflicts.
+
+Benign: 
+Number of conflicts: 5
+Number of sources: 4
+Number of sinks: 4
+Performance data: Taint Propagation: 5 seconds
+Total Runtime: 10 seconds
+Max Memory Consumption: 514 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLongitude()>()
+	$r4 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLatitude()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("UmAd SDK 2.0", $r0)
+	virtualinvoke $r5.<java.io.FileOutputStream: void write(byte[],int,int)>($r4, 0, $i1)
+	virtualinvoke $r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r4, 0, $i1)
+	$r3 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, null, null, "bucket_display_name")
+
+Malign: 
+Number of conflicts: 3
+Number of sources: 1
+Number of sinks: 3
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 366 MB
+
+List of Sources: 
+	$r4 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Wooboo SDK", $r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Wooboo SDK", $r7)
+	$r3 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, null, null, "bucket_display_name")
+

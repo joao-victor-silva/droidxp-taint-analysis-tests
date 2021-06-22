@@ -1,0 +1,65 @@
+App9 results data. 
+
+Found 123 conflicts.
+
+Benign: 
+Number of conflicts: 7
+Number of sources: 4
+Number of sinks: 3
+Performance data: Total Runtime: 3 seconds
+Max Memory Consumption: 571 MB
+
+List of Sources: 
+	r4 = virtualinvoke r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r5 = virtualinvoke $r7.<java.util.Locale: java.lang.String getCountry()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("ServiceNet", $r3)
+	$r4 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r2)
+	virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+
+Malign: 
+Number of conflicts: 130
+Number of sources: 14
+Number of sinks: 19
+Performance data: Total Runtime: 13 seconds
+Max Memory Consumption: 560 MB
+
+List of Sources: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r5 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r6 = interfaceinvoke $r11.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r1 = interfaceinvoke $r9.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	r4 = virtualinvoke r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r6 = virtualinvoke $r5.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r21 = virtualinvoke $r9.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r5 = virtualinvoke $r7.<java.util.Locale: java.lang.String getCountry()>()
+
+List of Sinks: 
+	virtualinvoke $r5.<android.os.Handler: boolean sendMessage(android.os.Message)>($r6)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r2)
+	virtualinvoke $r11.<java.io.OutputStream: void write(byte[],int,int)>($r10, 0, $i0)
+	$r4 = virtualinvoke $r5.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r2)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke r0.<com.j.p.ui.MA: android.content.ComponentName startService(android.content.Intent)>($r3)
+	virtualinvoke $r9.<java.net.HttpURLConnection: void connect()>()
+	virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+	virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r8)
+	virtualinvoke r0.<com.j.p.ui.MA: android.content.ComponentName startService(android.content.Intent)>($r5)
+	virtualinvoke r0.<com.j.p.net.MSE: android.content.ComponentName startService(android.content.Intent)>($r1)
+	virtualinvoke $r14.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("ServiceNet", $r3)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r8.<java.io.FileOutputStream: void write(byte[],int,int)>($r20, 0, $i2)
+	$r21 = virtualinvoke $r9.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	virtualinvoke $r8.<android.content.Intent: android.content.Intent setAction(java.lang.String)>($r6)
+	virtualinvoke $r12.<java.io.OutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+

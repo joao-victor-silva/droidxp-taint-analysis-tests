@@ -1,0 +1,33 @@
+App81 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 2
+Number of sources: 1
+Number of sinks: 2
+Performance data: Taint Propagation: 5 seconds
+Total Runtime: 6 seconds
+Max Memory Consumption: 716 MB
+
+List of Sources: 
+	$r1 = interfaceinvoke $r0.<android.database.Cursor: java.lang.String getString(int)>($i0)
+List of Sinks: 
+	virtualinvoke $r6.<android.content.Intent: android.content.Intent setComponent(android.content.ComponentName)>($r7)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("SearchView", $r5, $r3)
+
+Malign: 
+Number of conflicts: 2
+Number of sources: 1
+Number of sinks: 2
+Performance data: Taint Propagation: 5 seconds
+Total Runtime: 7 seconds
+Max Memory Consumption: 550 MB
+
+List of Sources: 
+	$r1 = interfaceinvoke $r0.<android.database.Cursor: java.lang.String getString(int)>($i0)
+
+List of Sinks: 
+	virtualinvoke $r6.<android.content.Intent: android.content.Intent setComponent(android.content.ComponentName)>($r7)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("SearchView", $r5, $r3)
+

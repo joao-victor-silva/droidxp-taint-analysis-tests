@@ -1,0 +1,64 @@
+App32 results data. 
+
+Found 57 conflicts.
+
+Benign: 
+Number of conflicts: 2
+Number of sources: 2
+Number of sinks: 2
+Performance data: Total Runtime: 2 seconds
+Max Memory Consumption: 563 MB
+
+List of Sources: 
+	$r5 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r7 = virtualinvoke $r11.<java.util.Locale: java.lang.String getCountry()>()
+List of Sinks: 
+	$r18 = virtualinvoke $r16.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("OpenUDID", $r0)
+
+Malign: 
+Number of conflicts: 59
+Number of sources: 14
+Number of sinks: 19
+Performance data: Callgraph Construction: 1 seconds
+Taint Propagation: 1 seconds
+Total Runtime: 14 seconds
+Max Memory Consumption: 618 MB
+
+List of Sources: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLatitude()>()
+	$r7 = virtualinvoke $r11.<java.util.Locale: java.lang.String getCountry()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r10 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r12 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLongitude()>()
+	$r5 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r3.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r4, 0, $i5)
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke $r2.<com.soeran.cosen.zuwm.uaenvw.ac: boolean sendMessage(android.os.Message)>($r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r2.<com.soeran.cosen.ah: boolean sendMessage(android.os.Message)>($r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r5)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("OpenUDID", $r0)
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	virtualinvoke $r17.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke $r2.<com.soeran.cosen.zuwm.bh: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	$r18 = virtualinvoke $r16.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+

@@ -1,0 +1,52 @@
+App76 results data. 
+
+Found 28 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 2 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 526 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 28
+Number of sources: 14
+Number of sinks: 11
+Performance data: Taint Propagation: 2 seconds
+Total Runtime: 7 seconds
+Max Memory Consumption: 361 MB
+
+List of Sources: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d1 = virtualinvoke $r6.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLongitude()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLongitude()>()
+	$r2 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r10.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLatitude()>()
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r4, $r6)
+	$r8 = interfaceinvoke $r7.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)
+	virtualinvoke $r5.<java.io.FileOutputStream: void write(byte[])>($r7)
+	virtualinvoke $r13.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r2.<com.kuguo.ad.v: boolean sendMessage(android.os.Message)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android__log", $r10)
+	virtualinvoke $r2.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("_", "1")
+	virtualinvoke $r3.<java.io.OutputStream: void write(byte[])>($r5)
+	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android__log", $r7)
+

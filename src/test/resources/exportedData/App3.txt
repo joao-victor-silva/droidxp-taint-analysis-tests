@@ -1,0 +1,52 @@
+App3 results data. 
+
+Found 28 conflicts.
+
+Benign: 
+Number of conflicts: 6
+Number of sources: 3
+Number of sinks: 4
+Performance data: Taint Propagation: 43 seconds
+Total Runtime: 61 seconds
+Max Memory Consumption: 1272 MB
+
+List of Sources: 
+	$r6 = virtualinvoke $r5.<java.util.Locale: java.lang.String getCountry()>()
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+List of Sinks: 
+	virtualinvoke r2.<java.io.OutputStream: void write(byte[])>($r3)
+	virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Localytics_uploader", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Refraction", $r4)
+
+Malign: 
+Number of conflicts: 32
+Number of sources: 7
+Number of sinks: 11
+Performance data: Taint Propagation: 49 seconds
+Total Runtime: 70 seconds
+Max Memory Consumption: 1260 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r6 = virtualinvoke $r5.<java.util.Locale: java.lang.String getCountry()>()
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r3 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r2)
+	virtualinvoke r2.<java.io.OutputStream: void write(byte[])>($r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r16.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke r2.<java.io.File: boolean delete()>()
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Localytics_uploader", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Refraction", $r4)
+

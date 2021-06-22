@@ -1,0 +1,37 @@
+App92 results data. 
+
+Found 5 conflicts.
+
+Benign: 
+Number of conflicts: 3
+Number of sources: 2
+Number of sinks: 3
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 1 seconds
+Max Memory Consumption: 178 MB
+
+List of Sources: 
+	$r8 = interfaceinvoke $r2.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r3 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>($i0)
+List of Sinks: 
+	virtualinvoke r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r3, 0, i0)
+	$r12 = virtualinvoke $r8.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r2)
+	virtualinvoke r4.<java.io.FileWriter: void write(java.lang.String)>(r5)
+
+Malign: 
+Number of conflicts: 5
+Number of sources: 3
+Number of sinks: 2
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 208 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLongitude()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLatitude()>()
+	$r17 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r7, $r10)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r6)
+

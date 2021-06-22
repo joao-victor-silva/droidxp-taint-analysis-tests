@@ -1,0 +1,34 @@
+App13 results data. 
+
+Found 13 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 313 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 13
+Number of sources: 3
+Number of sinks: 5
+Performance data: Callgraph Construction: 2 seconds
+Taint Propagation: 2 seconds
+Total Runtime: 5 seconds
+Max Memory Consumption: 446 MB
+
+List of Sources: 
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+
+List of Sinks: 
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r9)
+	virtualinvoke $r16.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+

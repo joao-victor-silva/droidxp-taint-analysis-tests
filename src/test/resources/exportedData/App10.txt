@@ -1,0 +1,44 @@
+App10 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 9
+Number of sources: 2
+Number of sinks: 6
+Performance data: Callgraph Construction: 4 seconds
+Taint Propagation: 1 seconds
+Total Runtime: 7 seconds
+Max Memory Consumption: 154 MB
+
+List of Sources: 
+	$r6 = interfaceinvoke $r14.<android.database.Cursor: java.lang.String getString(int)>($i2)
+	$r13 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+List of Sinks: 
+	virtualinvoke $r7.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r8, 0, $i2)
+	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+	virtualinvoke $r4.<java.io.OutputStream: void write(byte[],int,int)>($r5, 0, $i0)
+	virtualinvoke $r13.<java.io.FileOutputStream: void write(byte[],int,int)>($r12, 0, $i1)
+	$r2 = virtualinvoke $r0.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>($r2, $r6)
+	virtualinvoke $r14.<java.io.File: boolean delete()>()
+
+Malign: 
+Number of conflicts: 9
+Number of sources: 2
+Number of sinks: 6
+Performance data: Taint Propagation: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 220 MB
+
+List of Sources: 
+	$r6 = interfaceinvoke $r14.<android.database.Cursor: java.lang.String getString(int)>($i2)
+	$r13 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+	virtualinvoke $r4.<java.io.OutputStream: void write(byte[],int,int)>($r5, 0, $i0)
+	virtualinvoke $r7.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r8, 0, $i2)
+	virtualinvoke $r13.<java.io.FileOutputStream: void write(byte[],int,int)>($r12, 0, $i1)
+	$r2 = virtualinvoke $r0.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>($r2, $r6)
+	virtualinvoke $r14.<java.io.File: boolean delete()>()
+

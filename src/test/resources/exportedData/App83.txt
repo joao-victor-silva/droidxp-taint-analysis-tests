@@ -1,0 +1,54 @@
+App83 results data. 
+
+Found 38 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 282 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 38
+Number of sources: 15
+Number of sinks: 14
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 264 MB
+
+List of Sources: 
+	$r20 = interfaceinvoke $r12.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLongitude()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLongitude()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r12.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r2 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r13 = interfaceinvoke $r12.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLatitude()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r2.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("_", "1")
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lat", $f0)
+	$r9 = interfaceinvoke $r9.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l0)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l1)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lng", $f0)
+	virtualinvoke $r2.<com.kuguo.push.i: boolean sendMessage(android.os.Message)>($r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r4, $r6)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	$r8 = interfaceinvoke $r7.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)
+	virtualinvoke $r5.<java.io.FileOutputStream: void write(byte[])>($r7)
+	virtualinvoke $r8.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r3, 0, $i5)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+

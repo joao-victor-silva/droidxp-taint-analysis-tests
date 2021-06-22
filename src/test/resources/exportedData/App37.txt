@@ -1,0 +1,79 @@
+App37 results data. 
+
+Found 17 conflicts.
+
+Benign: 
+Number of conflicts: 40
+Number of sources: 12
+Number of sinks: 14
+Performance data: Callgraph Construction: 1 seconds
+Taint Propagation: 1 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 477 MB
+
+List of Sources: 
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(0)
+	r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+	r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r6 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(4)
+	$r2 = virtualinvoke r25.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	r3 = interfaceinvoke $r15.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = interfaceinvoke $r4.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	r3 = interfaceinvoke $r15.<android.database.Cursor: java.lang.String getString(int)>(0)
+List of Sinks: 
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("InGameDB", $r4)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("SB", $r6)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("PostToWeb", $r4)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("UpdateScore", $r5)
+	virtualinvoke $r10.<java.io.OutputStream: void write(byte[])>($r14)
+	virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("videoAd", $r4)
+	virtualinvoke $r18.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r22, $r23)
+	virtualinvoke $r10.<java.io.OutputStream: void write(byte[],int,int)>($r6, 0, $i2)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MillennialMediaAdSDK", $r0)
+	virtualinvoke $r10.<java.io.OutputStream: void write(byte[],int,int)>($r6, 0, $i5)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("getScoreFromInternetServer", $r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MillennialMediaAdSDK", $r11)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("TS", $r6)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("ScoreBoard", $r6)
+
+Malign: 
+Number of conflicts: 41
+Number of sources: 12
+Number of sinks: 14
+Performance data: Total Runtime: 4 seconds
+Max Memory Consumption: 682 MB
+
+List of Sources: 
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(0)
+	r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+	r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r6 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+	r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(4)
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke r25.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	r3 = interfaceinvoke $r15.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = interfaceinvoke $r4.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	r3 = interfaceinvoke $r15.<android.database.Cursor: java.lang.String getString(int)>(0)
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("InGameDB", $r4)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("SB", $r6)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("PostToWeb", $r4)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("UpdateScore", $r5)
+	virtualinvoke $r10.<java.io.OutputStream: void write(byte[])>($r14)
+	virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("videoAd", $r4)
+	virtualinvoke $r18.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r22, $r23)
+	virtualinvoke $r10.<java.io.OutputStream: void write(byte[],int,int)>($r6, 0, $i2)
+	virtualinvoke r0.<com.millennialmedia.android.VideoPlayer: void startActivityForResult(android.content.Intent,int)>(r21, 0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MillennialMediaAdSDK", $r0)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("getScoreFromInternetServer", $r3)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("TS", $r6)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MillennialMediaAdSDK", $r11)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("ScoreBoard", $r6)
+

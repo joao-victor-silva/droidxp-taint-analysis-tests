@@ -1,0 +1,61 @@
+App52 results data. 
+
+Found 32 conflicts.
+
+Benign: 
+Number of conflicts: 3
+Number of sources: 3
+Number of sinks: 2
+Performance data: Callgraph Construction: 2 seconds
+Total Runtime: 3 seconds
+Max Memory Consumption: 460 MB
+
+List of Sources: 
+	$r19 = interfaceinvoke $r17.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r18 = interfaceinvoke $r17.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0)
+List of Sinks: 
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("", $r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("PartyTrackDebugInfo", $r0)
+
+Malign: 
+Number of conflicts: 35
+Number of sources: 12
+Number of sinks: 17
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 11 seconds
+Max Memory Consumption: 489 MB
+
+List of Sources: 
+	$r19 = interfaceinvoke $r17.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r18 = interfaceinvoke $r17.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r10 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r2.<com.sumase.nuatie.wulley.ab: boolean sendMessage(android.os.Message)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("media__log", $r1)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("", $r2)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r15.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r16, 0, $i0)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r16.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r17, 0, $i0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r5)
+	virtualinvoke $r2.<com.hunstun.tallsyen.blawe.ah: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r2.<com.luotuy.mustn.bn: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r1)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("PartyTrackDebugInfo", $r0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+

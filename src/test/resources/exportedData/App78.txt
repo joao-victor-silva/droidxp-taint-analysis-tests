@@ -1,0 +1,44 @@
+App78 results data. 
+
+Found 18 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 292 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 18
+Number of sources: 10
+Number of sinks: 9
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 510 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$r4 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r6 = virtualinvoke $r5.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r8 = virtualinvoke $r7.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLongitude()>()
+	$r15 = interfaceinvoke $r14.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+
+List of Sinks: 
+	virtualinvoke $r2.<java.io.FileOutputStream: void write(byte[],int,int)>($r3, 0, $i3)
+	$r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("last_gps_change_time", $l0)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lng", $f0)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("IMGA", $r0)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r0, $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lat", $f0)
+	virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r13)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l0)
+

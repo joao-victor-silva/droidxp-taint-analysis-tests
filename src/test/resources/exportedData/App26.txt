@@ -1,0 +1,73 @@
+App26 results data. 
+
+Found 27 conflicts.
+
+Benign: 
+Number of conflicts: 37
+Number of sources: 7
+Number of sinks: 10
+Performance data: Taint Propagation: 2 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 556 MB
+
+List of Sources: 
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, $r1, null, null)
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r1 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r1 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(3)
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(3)
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(4)
+List of Sinks: 
+	virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, $r1, null, null)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r1, null, null, null)
+	virtualinvoke r0.<org.kreed.vanilla.PlaybackService: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r18, $r19)
+	virtualinvoke $r0.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)
+	virtualinvoke $r9.<android.os.Handler: boolean sendMessage(android.os.Message)>($r11)
+	$r13 = virtualinvoke $r10.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r11, $r12, null, null, "name")
+	virtualinvoke r0.<org.kreed.vanilla.PlaybackService: void sendBroadcast(android.content.Intent)>($r12)
+	$r6 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r1, $r5, null, null)
+	virtualinvoke $r0.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r5)
+
+Malign: 
+Number of conflicts: 54
+Number of sources: 15
+Number of sinks: 14
+Performance data: Taint Propagation: 1 seconds
+Total Runtime: 9 seconds
+Max Memory Consumption: 470 MB
+
+List of Sources: 
+	$r12 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLongitude()>()
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r19 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(3)
+	$r2 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(4)
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r12.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r2 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, $r1, null, null)
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r1 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r1 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(3)
+
+List of Sinks: 
+	virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r2.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("_", "1")
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r1, null, null, null)
+	virtualinvoke $r7.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r2, 0, $i5)
+	$r4 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r3, "is_music!=0", null, null)
+	$r13 = virtualinvoke $r10.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r11, $r12, null, null, "name")
+	$r6 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r1, $r5, null, null)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r1, "is_music!=0", null, null)
+	virtualinvoke $r0.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r8)
+	$r8 = interfaceinvoke $r7.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)
+	virtualinvoke r0.<org.kreed.vanilla.PlaybackActivity: android.content.ComponentName startService(android.content.Intent)>($r6)
+	virtualinvoke $r5.<java.io.FileOutputStream: void write(byte[])>($r7)
+	virtualinvoke $r0.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2)
+	virtualinvoke $r9.<android.os.Handler: boolean sendMessage(android.os.Message)>($r11)
+

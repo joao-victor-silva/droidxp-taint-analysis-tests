@@ -1,0 +1,1 @@
+The exported data of the analysis goes to this folder.

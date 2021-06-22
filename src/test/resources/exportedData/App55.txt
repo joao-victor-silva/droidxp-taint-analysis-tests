@@ -1,0 +1,29 @@
+App55 results data. 
+
+Found 4 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 500 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 4
+Number of sources: 2
+Number of sinks: 2
+Performance data: Total Runtime: 2 seconds
+Max Memory Consumption: 536 MB
+
+List of Sources: 
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+

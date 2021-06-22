@@ -1,0 +1,48 @@
+App95 results data. 
+
+Found 41 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 207 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 41
+Number of sources: 10
+Number of sinks: 14
+Performance data: Total Runtime: 9 seconds
+Max Memory Consumption: 404 MB
+
+List of Sources: 
+	$r8 = interfaceinvoke $r9.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r9 = virtualinvoke $r5.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r4 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r2)
+	virtualinvoke $r3.<android.os.Handler: boolean sendMessage(android.os.Message)>($r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r10.<java.net.HttpURLConnection: void connect()>()
+	virtualinvoke $r5.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r12)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r2.<com.zbx.qjg.au: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r2.<java.io.File: boolean delete()>()
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r8.<android.os.Bundle: void putInt(java.lang.String,int)>($r1, $i3)
+

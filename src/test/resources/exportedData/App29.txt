@@ -1,0 +1,65 @@
+App29 results data. 
+
+Found 28 conflicts.
+
+Benign: 
+Number of conflicts: 4
+Number of sources: 4
+Number of sinks: 3
+Performance data: Total Runtime: 5 seconds
+Max Memory Consumption: 497 MB
+
+List of Sources: 
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r8 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>(0)
+	r7 = virtualinvoke r5.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("DoodleMobile", $r0)
+	$i0 = staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("FlurryAgent", $r1)
+	$r12 = interfaceinvoke $r11.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+
+Malign: 
+Number of conflicts: 32
+Number of sources: 17
+Number of sinks: 15
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 6 seconds
+Max Memory Consumption: 556 MB
+
+List of Sources: 
+	$r20 = interfaceinvoke $r12.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLongitude()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLatitude()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r8 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>(0)
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLongitude()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r12.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r2 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r13 = interfaceinvoke $r12.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLatitude()>()
+	r7 = virtualinvoke r5.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r2.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("_", "1")
+	virtualinvoke $r2.<com.slegl.push.i: boolean sendMessage(android.os.Message)>($r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lat", $f0)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("DoodleMobile", $r0)
+	$r12 = interfaceinvoke $r11.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+	$r9 = interfaceinvoke $r9.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l0)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l1)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lng", $f0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r4, $r6)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	$r8 = interfaceinvoke $r7.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3)
+	virtualinvoke $r8.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r3, 0, $i5)
+	virtualinvoke $r5.<java.io.FileOutputStream: void write(byte[])>($r7)
+	$i0 = staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("FlurryAgent", $r1)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+

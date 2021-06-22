@@ -1,0 +1,27 @@
+App28 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Total Runtime: 3 seconds
+Max Memory Consumption: 380 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r2.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("MoPub", $r2)
+
+Malign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 3 seconds
+Max Memory Consumption: 505 MB
+
+List of Sources: 
+
+List of Sinks: 
+

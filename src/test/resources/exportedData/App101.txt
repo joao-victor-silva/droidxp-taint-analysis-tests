@@ -1,0 +1,97 @@
+App101 results data. 
+
+Found 47 conflicts.
+
+Benign: 
+Number of conflicts: 21
+Number of sources: 9
+Number of sinks: 12
+Performance data: Callgraph Construction: 57 seconds
+Taint Propagation: 41 seconds
+Total Runtime: 199 seconds
+Max Memory Consumption: 1128 MB
+
+List of Sources: 
+	$r9 = interfaceinvoke r6.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r15 = interfaceinvoke $r14.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r8 = virtualinvoke r3.<java.net.URL: java.io.InputStream openStream()>()
+	$r16 = virtualinvoke $r15.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+	$r17 = interfaceinvoke r14.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r31 = interfaceinvoke r28.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	r4 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("error", $r1, r2)
+	virtualinvoke r5.<java.io.StringWriter: void write(int)>($c3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("[appMobi]", $r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("[appMobi]", $r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("[appMobi]", $r1)
+	interfaceinvoke $r7.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("pkg", $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("downloadConfig", $r4)
+	virtualinvoke r9.<java.io.FileOutputStream: void write(byte[],int,int)>(r6, 0, $i2)
+	interfaceinvoke $r7.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("name", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("[appMobi]", $r7)
+	$r9 = virtualinvoke r5.<java.net.URL: java.io.InputStream openStream()>()
+	virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+
+Malign: 
+Number of conflicts: 61
+Number of sources: 21
+Number of sinks: 27
+Performance data: Taint Propagation: 24 seconds
+Total Runtime: 138 seconds
+Max Memory Consumption: 799 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r15 = interfaceinvoke $r14.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r8 = virtualinvoke r3.<java.net.URL: java.io.InputStream openStream()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r10 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r17 = interfaceinvoke r14.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r31 = interfaceinvoke r28.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r9 = interfaceinvoke r6.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r16 = virtualinvoke $r15.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	r4 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r2.<com.sumase.nuatie.wulley.ab: boolean sendMessage(android.os.Message)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("media__log", $r1)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r15.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r16, 0, $i0)
+	virtualinvoke $r16.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r17, 0, $i0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r5)
+	virtualinvoke $r2.<com.hunstun.tallsyen.blawe.ah: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke r5.<java.io.StringWriter: void write(int)>($c3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("[appMobi]", $r2)
+	virtualinvoke $r17.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke r9.<java.io.FileOutputStream: void write(byte[],int,int)>(r6, 0, $i2)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("error", $r1, r2)
+	interfaceinvoke $r7.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("password", $r2)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r2.<com.luotuy.mustn.bn: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("[appMobi]", $r2)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r1)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("[appMobi]", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("downloadConfig", $r4)
+	$r9 = virtualinvoke r5.<java.net.URL: java.io.InputStream openStream()>()
+	virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+

@@ -1,0 +1,122 @@
+App2 results data. 
+
+Found 15 conflicts.
+
+Benign: 
+Number of conflicts: 63
+Number of sources: 16
+Number of sinks: 32
+Performance data: Total Runtime: 4 seconds
+Max Memory Consumption: 452 MB
+
+List of Sources: 
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "bookmark = 1", null, $r4)
+	$r4 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r7 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r6, $r3, $r5, null, null)
+	$r4 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, null, null, null)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "visits > 0", null, "date DESC")
+	$r5 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, $r1, null, null)
+	$r7 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r15 = virtualinvoke $r7.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r8 = virtualinvoke $r7.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r6 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r7 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r6 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, $r2, $r1, null, $r4)
+	$r8 = interfaceinvoke $r6.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+List of Sinks: 
+	virtualinvoke $r4.<java.io.FileWriter: void write(java.lang.String)>($r3)
+	virtualinvoke $r5.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r6, $r7)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r0, $r8)
+	virtualinvoke $r0.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r1, null, null)
+	virtualinvoke $r0.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r6, $r8, $r1, null)
+	virtualinvoke $r8.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r6, $r9)
+	virtualinvoke $r8.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r3)
+	virtualinvoke $r9.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r7)
+	virtualinvoke $r0.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r4, $r1, null)
+	virtualinvoke $r0.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, $r2, null)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void startActivityForResult(android.content.Intent,int)>($r6, 1)
+	virtualinvoke $r0.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r4, $r1, $r3, null)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "visits > 0", null, "date DESC")
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("ProxySettings", $r2)
+	virtualinvoke $r3.<cn.cf.shop_ele.ui.activities.WeaveBookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r8)
+	virtualinvoke $r7.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r8, null, null)
+	$r5 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, $r2, null, null)
+	virtualinvoke $r3.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r2)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.WeaveBookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r7)
+	virtualinvoke $r4.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r3)
+	virtualinvoke $r0.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r2, $r1)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "bookmark = 1", null, $r4)
+	virtualinvoke $r1.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r2, 0, $i0)
+	virtualinvoke $r8.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r6)
+	virtualinvoke $r9.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r8)
+	virtualinvoke $r0.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r3, $r6, $r2, null)
+	virtualinvoke r0.<cn.cf.shop_ele.games.download.DownloadActivity: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r2, $r1)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void startActivityForResult(android.content.Intent,int)>($r1, 0)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r6)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DownloadManager", $r5)
+	virtualinvoke r0.<cn.cf.shop_ele.games.download.DownloadActivity: android.content.ComponentName startService(android.content.Intent)>($r4)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, null, null, null)
+
+Malign: 
+Number of conflicts: 71
+Number of sources: 16
+Number of sinks: 33
+Performance data: Total Runtime: 8 seconds
+Max Memory Consumption: 484 MB
+
+List of Sources: 
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "bookmark = 1", null, $r4)
+	$r4 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r7 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r6, $r3, $r5, null, null)
+	$r4 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, null, null, null)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "visits > 0", null, "date DESC")
+	$r5 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, $r1, null, null)
+	$r7 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r15 = virtualinvoke $r7.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r6 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r8 = virtualinvoke $r7.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r7 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r6 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, $r2, $r1, null, $r4)
+	$r8 = interfaceinvoke $r6.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+
+List of Sinks: 
+	virtualinvoke $r4.<java.io.FileWriter: void write(java.lang.String)>($r3)
+	virtualinvoke $r5.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r6, $r7)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r0, $r8)
+	virtualinvoke $r0.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r6, $r8, $r1, null)
+	virtualinvoke $r0.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r1, null, null)
+	virtualinvoke $r4.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("download_cmd_cancel_download")
+	virtualinvoke $r8.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r6, $r9)
+	virtualinvoke $r8.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r3)
+	virtualinvoke $r0.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r4, $r1, null)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void startActivityForResult(android.content.Intent,int)>($r6, 1)
+	virtualinvoke $r9.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r7)
+	virtualinvoke $r0.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, $r2, null)
+	virtualinvoke $r0.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r4, $r1, $r3, null)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, $r2, "visits > 0", null, "date DESC")
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("ProxySettings", $r2)
+	virtualinvoke $r3.<cn.cf.shop_ele.ui.activities.WeaveBookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r8)
+	$r5 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, $r2, null, null)
+	virtualinvoke $r3.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r2)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.WeaveBookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r7)
+	virtualinvoke $r0.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r2, $r1)
+	virtualinvoke $r4.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r3)
+	virtualinvoke $r8.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r6)
+	virtualinvoke $r1.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r2, 0, $i0)
+	virtualinvoke $r9.<android.app.Activity: void setResult(int,android.content.Intent)>(-1, $r8)
+	virtualinvoke $r4.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("download_cmd_pause_download")
+	virtualinvoke $r0.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r3, $r6, $r2, null)
+	virtualinvoke r0.<cn.cf.shop_ele.games.download.DownloadActivity: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r2, $r1)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void startActivityForResult(android.content.Intent,int)>($r1, 0)
+	$r6 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, $r2, $r1, null, $r4)
+	virtualinvoke r0.<cn.cf.shop_ele.ui.activities.BookmarksListActivity: void setResult(int,android.content.Intent)>(-1, $r6)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DownloadManager", $r5)
+	virtualinvoke r0.<cn.cf.shop_ele.games.download.DownloadActivity: android.content.ComponentName startService(android.content.Intent)>($r4)
+	$r3 = virtualinvoke $r0.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, null, null, null, null)
+

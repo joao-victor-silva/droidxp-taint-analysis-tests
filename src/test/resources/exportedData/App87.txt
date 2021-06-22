@@ -1,0 +1,42 @@
+App87 results data. 
+
+Found 15 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 1 seconds
+Max Memory Consumption: 214 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 15
+Number of sources: 8
+Number of sinks: 7
+Performance data: Taint Propagation: 2 seconds
+Total Runtime: 5 seconds
+Max Memory Consumption: 454 MB
+
+List of Sources: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r6.<android.location.Location: double getLongitude()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$d1 = virtualinvoke $r6.<android.location.Location: double getLatitude()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	virtualinvoke $r13.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android__log", $r10)
+	virtualinvoke $r3.<java.io.OutputStream: void write(byte[])>($r5)
+	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android__log", $r7)
+	virtualinvoke $r2.<com.kuguo.ad.w: boolean sendMessage(android.os.Message)>($r3)
+

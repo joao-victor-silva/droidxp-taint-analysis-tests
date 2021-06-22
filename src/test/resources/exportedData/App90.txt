@@ -1,0 +1,51 @@
+App90 results data. 
+
+Found 43 conflicts.
+
+Benign: 
+Number of conflicts: 2
+Number of sources: 2
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 490 MB
+
+List of Sources: 
+	$r6 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r7 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>()
+List of Sinks: 
+	virtualinvoke r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("msg", $r2)
+
+Malign: 
+Number of conflicts: 45
+Number of sources: 9
+Number of sinks: 13
+Performance data: Taint Propagation: 2 seconds
+Total Runtime: 9 seconds
+Max Memory Consumption: 353 MB
+
+List of Sources: 
+	$r6 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r2 = virtualinvoke $r5.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r7 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>()
+	$r4 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r17.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r1)
+	virtualinvoke r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("msg", $r2)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r2.<com.looton.soown.uawn.ah: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r16.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r9)
+	virtualinvoke $r2.<com.naiiwt.toolon.ab: boolean sendMessage(android.os.Message)>($r3)
+

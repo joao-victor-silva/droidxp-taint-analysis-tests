@@ -1,0 +1,55 @@
+App71 results data. 
+
+Found 58 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 176 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 58
+Number of sources: 13
+Number of sinks: 18
+Performance data: Total Runtime: 11 seconds
+Max Memory Consumption: 408 MB
+
+List of Sources: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLatitude()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r10 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLongitude()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke $r2.<com.bosena.birena.ah: boolean sendMessage(android.os.Message)>($r3)
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r15.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r16, 0, $i0)
+	virtualinvoke $r16.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r17, 0, $i0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r5)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	virtualinvoke $r2.<com.bosena.zumall.bg: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r17.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r2.<com.bosena.zumall.onerv.ac: boolean sendMessage(android.os.Message)>($r3)
+

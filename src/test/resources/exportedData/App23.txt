@@ -1,0 +1,30 @@
+App23 results data. 
+
+Found 3 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 627 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 3
+Number of sources: 3
+Number of sinks: 3
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 515 MB
+
+List of Sources: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r7 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>($r5, 0, $i1)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r1, $r0)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r1, $r0)
+

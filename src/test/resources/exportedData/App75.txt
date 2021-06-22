@@ -1,0 +1,40 @@
+App75 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 5
+Number of sources: 5
+Number of sinks: 2
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 262 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, "read=0 AND thread_id!=0 AND msg_box=1", null, null)
+	$r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, $r1, null, "last_message_date DESC")
+	$r4 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r3, null, null, null)
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, "read=0 AND thread_id!=0 AND type=1", null, null)
+List of Sinks: 
+	$r8 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r6, "msg_id=?", $r7, null)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>($r1, $l0)
+
+Malign: 
+Number of conflicts: 5
+Number of sources: 5
+Number of sinks: 2
+Performance data: Taint Propagation: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 259 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, "read=0 AND thread_id!=0 AND msg_box=1", null, null)
+	$r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, $r1, null, "last_message_date DESC")
+	$r4 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r3, null, null, null)
+	$r5 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r4, "read=0 AND thread_id!=0 AND type=1", null, null)
+
+List of Sinks: 
+	$r8 = virtualinvoke $r2.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r6, "msg_id=?", $r7, null)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>($r1, $l0)
+

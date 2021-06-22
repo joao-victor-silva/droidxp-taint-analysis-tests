@@ -1,0 +1,37 @@
+App49 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 3
+Number of sources: 2
+Number of sinks: 3
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 620 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r22 = virtualinvoke r4.<java.net.URL: java.io.InputStream openStream()>()
+List of Sinks: 
+	virtualinvoke r3.<java.io.FileOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+	interfaceinvoke $r7.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r6, $r3)
+	virtualinvoke r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("err", $r1)
+
+Malign: 
+Number of conflicts: 3
+Number of sources: 2
+Number of sinks: 3
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 346 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r22 = virtualinvoke r4.<java.net.URL: java.io.InputStream openStream()>()
+
+List of Sinks: 
+	virtualinvoke r3.<java.io.FileOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+	interfaceinvoke $r7.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r6, $r3)
+	virtualinvoke r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("err", $r1)
+

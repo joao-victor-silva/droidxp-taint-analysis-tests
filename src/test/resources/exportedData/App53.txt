@@ -1,0 +1,23 @@
+App53 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 349 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 240 MB
+
+List of Sources: 
+
+List of Sinks: 
+

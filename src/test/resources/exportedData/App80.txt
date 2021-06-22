@@ -1,0 +1,53 @@
+App80 results data. 
+
+Found 28 conflicts.
+
+Benign: 
+Number of conflicts: 4
+Number of sources: 2
+Number of sinks: 4
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 337 MB
+
+List of Sources: 
+	$r3 = virtualinvoke $r5.<android.content.pm.PackageManager: java.util.List getInstalledApplications(int)>(128)
+	$r5 = virtualinvoke $r4.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+List of Sinks: 
+	$z0 = virtualinvoke $r8.<java.io.File: boolean delete()>()
+	virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+	virtualinvoke r0.<zok.android.phonics.HomeActivity: void startActivityForResult(android.content.Intent,int)>($r4, 0)
+	$i0 = staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("FlurryAgent", $r1)
+
+Malign: 
+Number of conflicts: 31
+Number of sources: 9
+Number of sinks: 13
+Performance data: Total Runtime: 7 seconds
+Max Memory Consumption: 535 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r3 = virtualinvoke $r5.<android.content.pm.PackageManager: java.util.List getInstalledApplications(int)>(128)
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r5 = virtualinvoke $r4.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+	$r4 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+
+List of Sinks: 
+	virtualinvoke $r3.<android.os.Bundle: void putInt(java.lang.String,int)>("progress", $i0)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	$z0 = virtualinvoke $r8.<java.io.File: boolean delete()>()
+	virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, $r11)
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke r0.<zok.android.phonics.HomeActivity: void startActivityForResult(android.content.Intent,int)>($r4, 0)
+	virtualinvoke $r16.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r9)
+

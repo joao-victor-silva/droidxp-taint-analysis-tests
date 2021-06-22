@@ -1,0 +1,31 @@
+App89 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 2
+Number of sources: 2
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 297 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMob SDK", $r4)
+
+Malign: 
+Number of conflicts: 2
+Number of sources: 2
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 328 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMob SDK", $r4)
+

@@ -1,0 +1,118 @@
+App38 results data. 
+
+Found 4 conflicts.
+
+Benign: 
+Number of conflicts: 88
+Number of sources: 16
+Number of sinks: 29
+Performance data: Callgraph Construction: 2 seconds
+Taint Propagation: 166 seconds
+Path Reconstruction: 1 seconds
+Total Runtime: 207 seconds
+Max Memory Consumption: 1329 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131427553)
+	$r8 = virtualinvoke r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r4 = virtualinvoke $r3.<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>(0)
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLongitude()>()
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131428107)
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131427826)
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r5 = virtualinvoke $r4.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131428044)
+	$r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLatitude()>()
+	$r2 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>(2131427842)
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+List of Sinks: 
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("activities", $r1)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("activities", $r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("dntr", $l3)
+	virtualinvoke $r11.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>(r10, 0)
+	virtualinvoke $r6.<android.os.Handler: boolean sendMessage(android.os.Message)>($r7)
+	virtualinvoke $r7.<com.moyoyo.trade.assistor.ui.IMActivity: void startActivityForResult(android.content.Intent,int)>(r2, $i1)
+	virtualinvoke $r3.<com.moyoyo.trade.assistor.ui.IdCardActivity: void startActivityForResult(android.content.Intent,int)>(r2, $i0)
+	virtualinvoke $r2.<java.io.FileOutputStream: void write(byte[],int,int)>($r1, 0, $i1)
+	$r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("last_gps_change_time", $l0)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lng", $f0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r0, $r1)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r0, $r1)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("duration", $l0)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("listview", $r1)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("uptr", $l3)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lat", $f0)
+	virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("KEY_POSITION", $r3)
+	virtualinvoke r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("deviceId", $r3)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("last_report_time", $l1)
+	virtualinvoke $r4.<java.io.FileOutputStream: void write(byte[])>($r5)
+	$r5 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, $r6, null, null)
+	virtualinvoke $r3.<com.moyoyo.trade.assistor.ui.IdCardActivity: void startActivityForResult(android.content.Intent,int)>(r2, $i1)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r0, $r1)
+	$r6 = virtualinvoke r8.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>(" ", "")
+	virtualinvoke r0.<com.moyoyo.trade.assistor.ui.base.BaseActivity: android.content.ComponentName startService(android.content.Intent)>($r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+	virtualinvoke r0.<com.moyoyo.trade.assistor.ui.UpgradeActivity: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r13, $r14)
+	virtualinvoke $r7.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>(r5, 0)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l0)
+
+Malign: 
+Number of conflicts: 79
+Number of sources: 16
+Number of sinks: 27
+Performance data: Callgraph Construction: 2 seconds
+Taint Propagation: 138 seconds
+Total Runtime: 180 seconds
+Max Memory Consumption: 1391 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131427553)
+	$r8 = virtualinvoke r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r4 = virtualinvoke $r3.<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>(0)
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLongitude()>()
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131428107)
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131427826)
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r5 = virtualinvoke $r4.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131428044)
+	$r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r3.<android.location.Location: double getLatitude()>()
+	$r2 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>(2131427842)
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+
+List of Sinks: 
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("activities", $r1)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("activities", $r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("dntr", $l3)
+	virtualinvoke $r6.<android.os.Handler: boolean sendMessage(android.os.Message)>($r7)
+	virtualinvoke $r7.<com.moyoyo.trade.assistor.ui.IMActivity: void startActivityForResult(android.content.Intent,int)>(r2, $i1)
+	virtualinvoke $r3.<com.moyoyo.trade.assistor.ui.IdCardActivity: void startActivityForResult(android.content.Intent,int)>(r2, $i0)
+	virtualinvoke $r2.<java.io.FileOutputStream: void write(byte[],int,int)>($r1, 0, $i1)
+	staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("dalib", $r0)
+	$r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("last_gps_change_time", $l0)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lng", $f0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r0, $r1)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r0, $r1)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("duration", $l0)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("uptr", $l3)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)>("lat", $f0)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("last_report_time", $l1)
+	virtualinvoke r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("deviceId", $r3)
+	virtualinvoke $r4.<java.io.FileOutputStream: void write(byte[])>($r5)
+	$r5 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r4, null, $r6, null, null)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("dddddddddd", $r1)
+	virtualinvoke $r3.<com.moyoyo.trade.assistor.ui.IdCardActivity: void startActivityForResult(android.content.Intent,int)>(r2, $i1)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r0, $r1)
+	$r6 = virtualinvoke r8.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>(" ", "")
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+	virtualinvoke r0.<com.moyoyo.trade.assistor.ui.base.BaseActivity: android.content.ComponentName startService(android.content.Intent)>($r1)
+	virtualinvoke $r7.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>(r5, 0)
+	interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("gps_time", $l0)
+

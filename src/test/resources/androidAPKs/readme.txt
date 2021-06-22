@@ -1,0 +1,1 @@
+The Android Apks goes to this folder (see the README.md).

@@ -1,0 +1,46 @@
+App48 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 7
+Number of sources: 7
+Number of sinks: 2
+Performance data: Callgraph Construction: 2 seconds
+Taint Propagation: 2 seconds
+Total Runtime: 58 seconds
+Max Memory Consumption: 674 MB
+
+List of Sources: 
+	$r10 = virtualinvoke $r9.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+	$r4 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r10 = virtualinvoke $r9.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r7 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r7 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+	$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+List of Sinks: 
+	$i0 = staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+	$r5 = virtualinvoke $r5.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("0", "")
+
+Malign: 
+Number of conflicts: 7
+Number of sources: 7
+Number of sinks: 2
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 56 seconds
+Max Memory Consumption: 705 MB
+
+List of Sources: 
+	$r10 = virtualinvoke $r9.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+	$r4 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r7 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r10 = virtualinvoke $r9.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r3 = virtualinvoke $r2.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+	$r7 = virtualinvoke $r3.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+	$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	$i0 = staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+	$r5 = virtualinvoke $r5.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("0", "")
+

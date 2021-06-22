@@ -1,0 +1,32 @@
+App39 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 2
+Number of sources: 1
+Number of sinks: 2
+Performance data: Total Runtime: 2 seconds
+Max Memory Consumption: 497 MB
+
+List of Sources: 
+	$r1 = virtualinvoke r3.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r0, $r1)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r0, $r1)
+
+Malign: 
+Number of conflicts: 2
+Number of sources: 1
+Number of sinks: 2
+Performance data: Callgraph Construction: 4 seconds
+Total Runtime: 7 seconds
+Max Memory Consumption: 545 MB
+
+List of Sources: 
+	$r1 = virtualinvoke r3.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r0, $r1)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r0, $r1)
+

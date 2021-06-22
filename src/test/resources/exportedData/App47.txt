@@ -1,0 +1,37 @@
+App47 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 8
+Number of sources: 4
+Number of sinks: 1
+Performance data: Taint Propagation: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 340 MB
+
+List of Sources: 
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(10)
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(3)
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(5)
+List of Sinks: 
+	virtualinvoke $r12.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>($r8, 1)
+
+Malign: 
+Number of conflicts: 8
+Number of sources: 4
+Number of sinks: 1
+Performance data: Taint Propagation: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 391 MB
+
+List of Sources: 
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(10)
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(3)
+	$r7 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>(5)
+
+List of Sinks: 
+	virtualinvoke $r12.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>($r8, 1)
+

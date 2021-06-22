@@ -1,0 +1,29 @@
+App35 results data. 
+
+Found 3 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Max Memory Consumption: 595 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 3
+Number of sources: 3
+Number of sinks: 2
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 591 MB
+
+List of Sources: 
+	$r9 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+
+List of Sinks: 
+	virtualinvoke r5.<java.io.FileOutputStream: void write(byte[],int,int)>($r12, 0, $i0)
+	$r7 = virtualinvoke $r6.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r4)
+

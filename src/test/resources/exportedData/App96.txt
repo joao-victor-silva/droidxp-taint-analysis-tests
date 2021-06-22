@@ -1,0 +1,35 @@
+App96 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 4
+Number of sources: 2
+Number of sinks: 2
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 1 seconds
+Max Memory Consumption: 174 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r4)
+
+Malign: 
+Number of conflicts: 4
+Number of sources: 2
+Number of sinks: 2
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 449 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r4)
+

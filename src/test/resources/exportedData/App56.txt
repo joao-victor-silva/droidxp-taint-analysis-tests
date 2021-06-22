@@ -1,0 +1,35 @@
+App56 results data. 
+
+Found 3 conflicts.
+
+Benign: 
+Number of conflicts: 2
+Number of sources: 2
+Number of sinks: 2
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 344 MB
+
+List of Sources: 
+	$r3 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r8 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+List of Sinks: 
+	virtualinvoke $r7.<java.io.FileOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+
+Malign: 
+Number of conflicts: 3
+Number of sources: 3
+Number of sinks: 3
+Performance data: Total Runtime: 2 seconds
+Max Memory Consumption: 275 MB
+
+List of Sources: 
+	$r8 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r9 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r3 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r7.<java.io.FileOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+	virtualinvoke $r8.<java.io.FileOutputStream: void write(byte[],int,int)>($r3, 0, $i2)
+

@@ -1,0 +1,56 @@
+App44 results data. 
+
+Found 26 conflicts.
+
+Benign: 
+Number of conflicts: 8
+Number of sources: 4
+Number of sinks: 5
+Performance data: Total Runtime: 2 seconds
+Max Memory Consumption: 556 MB
+
+List of Sources: 
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r7 = virtualinvoke $r6.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+List of Sinks: 
+	interfaceinvoke $r8.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("Fiksu.savedUrls", $r5)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("FiksuTracking", $r11)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("FiksuTracking", $r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("FiksuTracking", $r7)
+	virtualinvoke r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r8, 0, $i1)
+
+Malign: 
+Number of conflicts: 34
+Number of sources: 8
+Number of sinks: 12
+Performance data: Callgraph Construction: 2 seconds
+Taint Propagation: 2 seconds
+Total Runtime: 8 seconds
+Max Memory Consumption: 437 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r5 = virtualinvoke r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r6 = interfaceinvoke $r5.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r7 = virtualinvoke $r6.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+
+List of Sinks: 
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	interfaceinvoke $r8.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("Fiksu.savedUrls", $r5)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("FiksuTracking", $r11)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("FiksuTracking", $r1)
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r16.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("FiksuTracking", $r7)
+	virtualinvoke r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r8, 0, $i1)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, $r11)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r4)
+

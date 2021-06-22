@@ -1,0 +1,45 @@
+App65 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 7
+Number of sources: 5
+Number of sinks: 4
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 560 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r11 = virtualinvoke r9.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r1)
+	virtualinvoke r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("response", $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("WOOYY", $r0)
+
+Malign: 
+Number of conflicts: 7
+Number of sources: 5
+Number of sinks: 4
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 440 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLongitude()>()
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r11 = virtualinvoke r9.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$d0 = virtualinvoke $r2.<android.location.Location: double getLatitude()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r1)
+	virtualinvoke r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("response", $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AdMobSDK", $r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("WOOYY", $r0)
+

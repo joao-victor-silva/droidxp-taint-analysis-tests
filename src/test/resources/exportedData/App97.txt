@@ -1,0 +1,27 @@
+App97 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 3 seconds
+Max Memory Consumption: 541 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 483 MB
+
+List of Sources: 
+
+List of Sinks: 
+

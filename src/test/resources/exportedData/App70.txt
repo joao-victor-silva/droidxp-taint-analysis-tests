@@ -1,0 +1,25 @@
+App70 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 325 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 280 MB
+
+List of Sources: 
+
+List of Sinks: 
+

@@ -1,0 +1,38 @@
+App12 results data. 
+
+Found 9 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 3 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 650 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 9
+Number of sources: 5
+Number of sinks: 5
+Performance data: Callgraph Construction: 1 seconds
+Taint Propagation: 1 seconds
+Total Runtime: 5 seconds
+Max Memory Consumption: 573 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLatitude()>()
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLongitude()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r2.<com.qq.ac: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+

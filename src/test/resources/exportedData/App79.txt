@@ -1,0 +1,30 @@
+App79 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 3
+Number of sources: 1
+Number of sinks: 1
+Performance data: Taint Propagation: 1 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 409 MB
+
+List of Sources: 
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+List of Sinks: 
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("ATM_APPLICATIONLISTVIEW", $r3)
+
+Malign: 
+Number of conflicts: 3
+Number of sources: 1
+Number of sinks: 1
+Performance data: Total Runtime: 3 seconds
+Max Memory Consumption: 388 MB
+
+List of Sources: 
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("ATM_APPLICATIONLISTVIEW", $r3)
+

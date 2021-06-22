@@ -1,0 +1,30 @@
+App85 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 4
+Number of sources: 1
+Number of sinks: 2
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 463 MB
+
+List of Sources: 
+	$r7 = virtualinvoke r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MoreFileActivity", $r1)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MoreActivity", $r1)
+
+Malign: 
+Number of conflicts: 4
+Number of sources: 1
+Number of sinks: 2
+Performance data: Max Memory Consumption: 242 MB
+
+List of Sources: 
+	$r7 = virtualinvoke r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MoreFileActivity", $r1)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MoreActivity", $r1)
+

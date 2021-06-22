@@ -1,0 +1,55 @@
+App100 results data. 
+
+Found 57 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 3 seconds
+Max Memory Consumption: 379 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 57
+Number of sources: 14
+Number of sinks: 14
+Performance data: Callgraph Construction: 1 seconds
+Taint Propagation: 4 seconds
+Total Runtime: 11 seconds
+Max Memory Consumption: 646 MB
+
+List of Sources: 
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(6)
+	$r2 = virtualinvoke r0.<com.liuyu.goOracle.SetupActivity: android.view.View findViewById(int)>(2131034156)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(3)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r1 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r1 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r4 = virtualinvoke $r3.<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>(0)
+	$r14 = interfaceinvoke $r13.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r6 = virtualinvoke $r10.<java.util.Locale: java.lang.String getCountry()>()
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r12 = interfaceinvoke $r11.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r7 = interfaceinvoke $r6.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r6 = virtualinvoke $r15.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+	$r4 = virtualinvoke $r12.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r6, 0, $i0)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("APP_SDK", $r3)
+	virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r1, $r2)
+	interfaceinvoke $r9.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("Package_Names", $r5)
+	$r1 = virtualinvoke $r1.<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>("http://ads.wapx.cn", "")
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("APP_SDK", $r6)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("className", $r9)
+	virtualinvoke $r17.<java.io.FileOutputStream: void write(byte[],int,int)>($r18, 0, $i1)
+	virtualinvoke $r3.<java.io.File: boolean delete()>()
+	$r1 = virtualinvoke $r1.<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>("http://app.wapx.cn", "")
+	virtualinvoke $r9.<java.io.FileOutputStream: void write(byte[])>($r6)
+	interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("packageName", $r8)
+	virtualinvoke $r6.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("android.intent.action.VIEW")
+	interfaceinvoke $r28.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("emulatorDeviceId", $r4)
+

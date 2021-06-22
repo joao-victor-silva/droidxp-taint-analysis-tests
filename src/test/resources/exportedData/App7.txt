@@ -1,0 +1,31 @@
+App7 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 4
+Number of sources: 2
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 191 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLongitude()>()
+List of Sinks: 
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r6)
+
+Malign: 
+Number of conflicts: 4
+Number of sources: 2
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 359 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLatitude()>()
+	$d0 = virtualinvoke $r4.<android.location.Location: double getLongitude()>()
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r6)
+

@@ -1,0 +1,91 @@
+App66 results data. 
+
+Found 18 conflicts.
+
+Benign: 
+Number of conflicts: 58
+Number of sources: 15
+Number of sinks: 19
+Performance data: Total Runtime: 5 seconds
+Max Memory Consumption: 521 MB
+
+List of Sources: 
+	$r2 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+	$r2 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r6 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(0)
+	$r4 = interfaceinvoke r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r6 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r6 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r9 = virtualinvoke $r7.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r5, 0)
+	$r14 = virtualinvoke r20.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()
+	$r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(0)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(2)
+List of Sinks: 
+	$r6 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r5, null, null, null)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r6, null, null, null)
+	virtualinvoke r0.<de.ub0r.android.websms.WebSMS: void sendBroadcast(android.content.Intent)>(r1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, $r0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r2, $r0)
+	$r12 = interfaceinvoke $r12.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("lastrun", r8)
+	interfaceinvoke $r12.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("sender", $r13)
+	virtualinvoke r0.<de.ub0r.android.websms.WebSMS: void startActivityForResult(android.content.Intent,int)>($r3, 1)
+	$r7 = virtualinvoke $r7.<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>(": ", ":\n* ")
+	r7 = virtualinvoke $r0.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>(r1)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r6, $r2, null, null)
+	virtualinvoke $r0.<android.content.Context: void sendBroadcast(android.content.Intent)>($r3)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, r3, null, null, null)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("WebSMS", $r0)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r6, null, null, null)
+	$r8 = virtualinvoke $r7.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, r2, null, null, null)
+	$r13 = virtualinvoke $r14.<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>("00", "+")
+	interfaceinvoke $r12.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("defprefix", $r14)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("WebSMS", $r0)
+
+Malign: 
+Number of conflicts: 56
+Number of sources: 15
+Number of sinks: 16
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 4 seconds
+Max Memory Consumption: 348 MB
+
+List of Sources: 
+	$r2 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+	$r2 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r15 = virtualinvoke r21.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()
+	$r6 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(0)
+	$r4 = interfaceinvoke r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r6 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r6 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r9 = virtualinvoke $r7.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r5, 0)
+	$r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(2)
+	$r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>(0)
+	$r5 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+	$r2 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(2)
+
+List of Sinks: 
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, $r0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>($r2, $r0)
+	interfaceinvoke $r14.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("defprefix", $r15)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("WebSMS", $r0)
+	virtualinvoke r0.<de.ub0r.android.websms.WebSMS: void startActivityForResult(android.content.Intent,int)>($r3, 1)
+	$r3 = virtualinvoke $r15.<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>("00", "+")
+	r7 = virtualinvoke $r0.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>(r1)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r2, $r0)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, $r6, $r2, null, null)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, r3, null, null, null)
+	virtualinvoke $r0.<android.content.Context: void sendBroadcast(android.content.Intent)>($r3)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("WebSMS", $r0)
+	$r7 = virtualinvoke $r1.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r2, $r6, null, null, null)
+	$r8 = virtualinvoke $r7.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r5, r2, null, null, null)
+	interfaceinvoke $r14.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("sender", $r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("WebSMS", $r0)
+

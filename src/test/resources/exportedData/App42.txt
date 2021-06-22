@@ -1,0 +1,39 @@
+App42 results data. 
+
+Found 12 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 1 seconds
+Max Memory Consumption: 206 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 12
+Number of sources: 3
+Number of sinks: 9
+Performance data: Callgraph Construction: 1 seconds
+Total Runtime: 2 seconds
+Max Memory Consumption: 228 MB
+
+List of Sources: 
+	$r6 = interfaceinvoke $r14.<android.database.Cursor: java.lang.String getString(int)>($i2)
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r12 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>(" ", "")
+	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+	virtualinvoke $r7.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r8, 0, $i2)
+	virtualinvoke $r4.<java.io.OutputStream: void write(byte[],int,int)>($r5, 0, $i0)
+	virtualinvoke $r13.<java.io.FileOutputStream: void write(byte[],int,int)>($r12, 0, $i1)
+	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("\n", "")
+	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("-", "")
+	$r2 = virtualinvoke $r0.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>($r2, $r6)
+	virtualinvoke $r14.<java.io.File: boolean delete()>()
+

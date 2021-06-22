@@ -1,0 +1,62 @@
+App1 results data. 
+
+Found 36 conflicts.
+
+Benign: 
+Number of conflicts: 5
+Number of sources: 5
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 693 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(11)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(10)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(9)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(6)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(5)
+List of Sinks: 
+	virtualinvoke r10.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("equation", $r12)
+
+Malign: 
+Number of conflicts: 41
+Number of sources: 14
+Number of sinks: 17
+Performance data: Total Runtime: 11 seconds
+Max Memory Consumption: 426 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(11)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(10)
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r9 = virtualinvoke $r5.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r8 = interfaceinvoke $r9.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r11 = interfaceinvoke $r10.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(9)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(6)
+	$r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>(5)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r3.<android.os.Handler: boolean sendMessage(android.os.Message)>($r4)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r2)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r9.<android.os.Handler: boolean sendMessage(android.os.Message)>($r7)
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r5.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r12)
+	virtualinvoke $r10.<java.net.HttpURLConnection: void connect()>()
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke r10.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("equation", $r12)
+	virtualinvoke $r3.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r10)
+	virtualinvoke $r2.<java.io.File: boolean delete()>()
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r8.<android.os.Bundle: void putInt(java.lang.String,int)>($r1, $i3)
+	virtualinvoke $r13.<java.net.HttpURLConnection: void connect()>()
+	virtualinvoke $r2.<com.texb.fsny.au: boolean sendMessage(android.os.Message)>($r3)
+

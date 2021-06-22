@@ -1,0 +1,27 @@
+App50 results data. 
+
+Found 1 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 406 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Total Runtime: 2 seconds
+Max Memory Consumption: 599 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+
+List of Sinks: 
+	virtualinvoke $r3.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r4, 0, $i5)
+

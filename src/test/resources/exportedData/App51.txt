@@ -1,0 +1,47 @@
+App51 results data. 
+
+Found 54 conflicts.
+
+Benign: 
+Number of conflicts: 0
+Number of sources: 0
+Number of sinks: 0
+Performance data: Callgraph Construction: 9 seconds
+Taint Propagation: 75 seconds
+Total Runtime: 88 seconds
+Max Memory Consumption: 1392 MB
+
+List of Sources: 
+List of Sinks: 
+
+Malign: 
+Number of conflicts: 54
+Number of sources: 5
+Number of sinks: 13
+Performance data: Callgraph Construction: 1 seconds
+Taint Propagation: 87 seconds
+Total Runtime: 102 seconds
+Max Memory Consumption: 1372 MB
+
+List of Sources: 
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r4 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r2 = virtualinvoke $r5.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r9 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+
+List of Sinks: 
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r15.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r4.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, $r11)
+	virtualinvoke $r17.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	virtualinvoke $r17.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r16.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>($r3, $r4)
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r2.<com.cwillay.niwin.as: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r2.<com.cwillay.coarn.p: boolean sendMessage(android.os.Message)>($r3)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r4)
+

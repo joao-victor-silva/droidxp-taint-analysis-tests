@@ -1,0 +1,67 @@
+App24 results data. 
+
+Found 38 conflicts.
+
+Benign: 
+Number of conflicts: 5
+Number of sources: 2
+Number of sinks: 5
+Performance data: Total Runtime: 4 seconds
+Max Memory Consumption: 474 MB
+
+List of Sources: 
+	$r3 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r1 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+List of Sinks: 
+	virtualinvoke r0.<com.computertimeco.saint.scores.HighScores: void startActivityForResult(android.content.Intent,int)>(r2, $i0)
+	virtualinvoke r0.<com.computertimeco.saint.common.SavedGame: void setResult(int,android.content.Intent)>(1, $r2)
+	virtualinvoke r0.<com.computertimeco.saint.common.SavedGame: void startActivityForResult(android.content.Intent,int)>(r2, $i0)
+	virtualinvoke $r2.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("playgame")
+	virtualinvoke r2.<android.content.Intent: android.content.Intent setAction(java.lang.String)>($r1)
+
+Malign: 
+Number of conflicts: 43
+Number of sources: 14
+Number of sinks: 21
+Performance data: Total Runtime: 13 seconds
+Max Memory Consumption: 547 MB
+
+List of Sources: 
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLatitude()>()
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r10 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r17 = interfaceinvoke $r16.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r5 = virtualinvoke $r4.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r10 = interfaceinvoke $r8.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r4 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)
+	$d0 = virtualinvoke $r13.<android.location.Location: double getLongitude()>()
+	$r1 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+	$r3 = interfaceinvoke $r2.<android.database.Cursor: java.lang.String getString(int)>($i1)
+	$r8 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+	$r2 = virtualinvoke $r4.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+
+List of Sinks: 
+	virtualinvoke $r2.<com.bosena.birena.ah: boolean sendMessage(android.os.Message)>($r3)
+	$r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+	virtualinvoke r0.<com.computertimeco.saint.scores.HighScores: void startActivityForResult(android.content.Intent,int)>(r2, $i0)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke r0.<com.computertimeco.saint.common.SavedGame: void setResult(int,android.content.Intent)>(1, $r2)
+	$r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke r0.<com.computertimeco.saint.common.SavedGame: void startActivityForResult(android.content.Intent,int)>(r2, $i0)
+	virtualinvoke $r15.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r16, 0, $i0)
+	virtualinvoke $r16.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r17, 0, $i0)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r5)
+	virtualinvoke $r18.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("filePath", $r3)
+	virtualinvoke r2.<android.content.Intent: android.content.Intent setAction(java.lang.String)>($r1)
+	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+	virtualinvoke $r2.<com.bosena.zumall.bg: boolean sendMessage(android.os.Message)>($r3)
+	virtualinvoke $r10.<java.io.FileOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
+	$r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("i", $r1)
+	virtualinvoke $r5.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("media__log", $r1)
+	virtualinvoke $r2.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("playgame")
+	virtualinvoke $r7.<java.io.BufferedWriter: void write(java.lang.String)>($r2)
+	virtualinvoke $r2.<com.bosena.zumall.onerv.ac: boolean sendMessage(android.os.Message)>($r3)
+

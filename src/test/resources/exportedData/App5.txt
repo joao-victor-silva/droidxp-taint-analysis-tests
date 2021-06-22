@@ -1,0 +1,29 @@
+App5 results data. 
+
+Found 0 conflicts.
+
+Benign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 246 MB
+
+List of Sources: 
+	$r1 = virtualinvoke r0.<org.pyload.android.client.AddLinksActivity: android.view.View findViewById(int)>(2131230729)
+List of Sinks: 
+	virtualinvoke r0.<org.pyload.android.client.AddLinksActivity: void setResult(int,android.content.Intent)>(-1, $r2)
+
+Malign: 
+Number of conflicts: 1
+Number of sources: 1
+Number of sinks: 1
+Performance data: Total Runtime: 1 seconds
+Max Memory Consumption: 362 MB
+
+List of Sources: 
+	$r1 = virtualinvoke r0.<org.pyload.android.client.AddLinksActivity: android.view.View findViewById(int)>(2131230729)
+
+List of Sinks: 
+	virtualinvoke r0.<org.pyload.android.client.AddLinksActivity: void setResult(int,android.content.Intent)>(-1, $r2)
+
