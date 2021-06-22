@@ -1,13 +1,15 @@
 App72 results data. 
 
-Found 2 conflicts.
+Found 0 conflicts.
 
 Benign: 
-Number of conflicts: 16
+Number of conflicts: 14
 Number of sources: 5
 Number of sinks: 7
-Performance data: Total Runtime: 1 seconds
-Max Memory Consumption: 340 MB
+Performance data: Callgraph Construction: 1 seconds
+Path Reconstruction: 1 seconds
+Total Runtime: 12 seconds
+Max Memory Consumption: 274 MB
 
 List of Sources: 
 	$r12 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
@@ -17,18 +19,21 @@ List of Sources:
 	$r14 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>($i0)
 List of Sinks: 
 	$r12 = virtualinvoke $r8.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("XXX", $r12)
-	virtualinvoke $r3.<java.io.FileOutputStream: void write(byte[])>($r4)
 	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r2)
+	virtualinvoke $r3.<java.io.FileOutputStream: void write(byte[])>($r4)
 	interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("duration", $l2)
+	interfaceinvoke $r6.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("appkey", $r2)
 	virtualinvoke $r14.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r15, r2)
-	interfaceinvoke $r6.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("session_id", $r5)
 	virtualinvoke r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("GroupName", $r8)
 
 Malign: 
 Number of conflicts: 14
 Number of sources: 5
 Number of sinks: 7
-Performance data: Max Memory Consumption: 351 MB
+Performance data: Callgraph Construction: 1 seconds
+Taint Propagation: 1 seconds
+Total Runtime: 3 seconds
+Max Memory Consumption: 288 MB
 
 List of Sources: 
 	$r12 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
@@ -40,9 +45,9 @@ List of Sources:
 List of Sinks: 
 	$r12 = virtualinvoke $r8.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("XXX", $r12)
 	virtualinvoke $r3.<java.io.FileOutputStream: void write(byte[])>($r4)
+	staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r2)
 	interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("duration", $l2)
 	interfaceinvoke $r6.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("appkey", $r2)
 	virtualinvoke $r14.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r15, r2)
-	interfaceinvoke $r6.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("session_id", $r5)
 	virtualinvoke r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("GroupName", $r8)
 

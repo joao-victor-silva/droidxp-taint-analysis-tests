@@ -1,16 +1,18 @@
-App73 results data.
+App73 results data. 
 
-Found 3 conflicts.
+Found 0 conflicts.
 
-Benign:
-Number of conflicts: 95
+Benign: 
+Number of conflicts: 87
 Number of sources: 7
 Number of sinks: 17
-Performance data: Callgraph Construction: 1 seconds
-Total Runtime: 3 seconds
-Max Memory Consumption: 494 MB
+Performance data: Callgraph Construction: 2 seconds
+Taint Propagation: 2 seconds
+Path Reconstruction: 1 seconds
+Total Runtime: 9 seconds
+Max Memory Consumption: 427 MB
 
-List of Sources:
+List of Sources: 
 	$d0 = virtualinvoke $r11.<android.location.Location: double getLongitude()>()
 	$r9 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
 	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
@@ -18,7 +20,7 @@ List of Sources:
 	$r1 = virtualinvoke $r0.<java.util.Locale: java.lang.String getCountry()>()
 	$d0 = virtualinvoke $r11.<android.location.Location: double getLatitude()>()
 	$r5 = interfaceinvoke $r12.<android.database.Cursor: java.lang.String getString(int)>($i2)
-List of Sinks:
+List of Sinks: 
 	virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>(" ", "")
 	virtualinvoke $r1.<java.io.ByteArrayOutputStream: void write(byte[])>($r2)
 	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
@@ -32,33 +34,33 @@ List of Sinks:
 	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(int)>(38)
 	$r1 = virtualinvoke $r0.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>($r1, $r6)
 	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("\n", "")
-	virtualinvoke $r0.<java.io.ByteArrayOutputStream: void write(byte[])>($r1)
 	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("-", "")
+	virtualinvoke $r0.<java.io.ByteArrayOutputStream: void write(byte[])>($r1)
 	virtualinvoke $r11.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r12, 0, $i1)
 	virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(int)>(38)
 
-Malign:
-Number of conflicts: 90
+Malign: 
+Number of conflicts: 91
 Number of sources: 7
 Number of sinks: 17
-Performance data: Callgraph Construction: 1 seconds
-Total Runtime: 4 seconds
-Max Memory Consumption: 505 MB
+Performance data: Callgraph Construction: 2 seconds
+Total Runtime: 5 seconds
+Max Memory Consumption: 445 MB
 
-List of Sources:
+List of Sources: 
 	$d0 = virtualinvoke $r11.<android.location.Location: double getLongitude()>()
-	$r9 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
 	$r4 = virtualinvoke $r3.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+	$r9 = interfaceinvoke $r7.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
 	$r11 = interfaceinvoke $r9.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
 	$r1 = virtualinvoke $r0.<java.util.Locale: java.lang.String getCountry()>()
 	$d0 = virtualinvoke $r11.<android.location.Location: double getLatitude()>()
 	$r5 = interfaceinvoke $r12.<android.database.Cursor: java.lang.String getString(int)>($i2)
 
-List of Sinks:
+List of Sinks: 
 	virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>(" ", "")
 	virtualinvoke $r1.<java.io.ByteArrayOutputStream: void write(byte[])>($r2)
-	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
 	virtualinvoke $r4.<java.io.OutputStream: void write(byte[],int,int)>($r5, 0, $i0)
+	virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(int)>($i0)
 	virtualinvoke $r5.<java.io.ByteArrayOutputStream: void write(int)>(38)
 	virtualinvoke $r12.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r11, 0, $i0)
 	virtualinvoke $r5.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r6, 0, $i2)
@@ -68,8 +70,8 @@ List of Sinks:
 	virtualinvoke $r9.<java.io.ByteArrayOutputStream: void write(int)>(38)
 	$r1 = virtualinvoke $r0.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>($r1, $r6)
 	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("\n", "")
-	virtualinvoke $r0.<java.io.ByteArrayOutputStream: void write(byte[])>($r1)
 	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("-", "")
+	virtualinvoke $r0.<java.io.ByteArrayOutputStream: void write(byte[])>($r1)
 	virtualinvoke $r11.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r12, 0, $i1)
 	virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(int)>(38)
 

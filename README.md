@@ -73,6 +73,8 @@ In the `src/test/resources/exportedData` folder are the files that contains all 
 - app-68
 - app-69
 - app-70
+- app-72
+- app-73
 - app-75
 - app-79
 - app-81
